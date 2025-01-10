@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood:feast.fileio:feast.parameter:feast.function:feast.expressions:feast.modelselect" required="BEAST.base v2.7.6" version="2.7">
+
+
+<!-- Data -->
+
+<!-- Alignments -->
+<data id="p17-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat17_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p18-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat18_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p21-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat21_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p22-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat22_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p24-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat24_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p26-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat26_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p27.1-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat27_1_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p27.2-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat27_2_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p28-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat28_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p29-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat29_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p30.1-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat30_1_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p30.2-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat30_2_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p31-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat31_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p32-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat32_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p33-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat33_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p34-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat34_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p35-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat35_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p37-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat37_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p38-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat38_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p39-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat39_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p40-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat40_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p41-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat41_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p42-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat42_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p43-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat43_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p44-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat44_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p45-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat45_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p46-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat46_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p47-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat47_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p48.1-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat48_1_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p48.2-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat48_2_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p50-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat50_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p51-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat51_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p52-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat52_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p53-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat53_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p55-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat55_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p56-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat56_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p60-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat60_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p61-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat61_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p62-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat62_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p63-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat63_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p64-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat64_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p65-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat65_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p66-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat66_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p68-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat68_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p69-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat69_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p71-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat71_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p72-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat72_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p73-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/coli/pat73_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+
+<!-- Alignments corrected with invariant sites -->
+<data id="p17-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p17-alignment-original' 
+	  constantSiteWeights="1161221 1195738 1198355 1159454">   <!-- A C G T -->
+</data>
+<data id="p18-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p18-alignment-original' 
+	  constantSiteWeights="1203172 1259469 1231626 1202843">   <!-- A C G T -->
+</data>
+<data id="p21-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p21-alignment-original' 
+	  constantSiteWeights="1250349 1291320 1282958 1246280">   <!-- A C G T -->
+</data>
+<data id="p22-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p22-alignment-original' 
+	  constantSiteWeights="1328742 1355006 1363395 1337427">   <!-- A C G T -->
+</data>
+<data id="p24-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p24-alignment-original' 
+	  constantSiteWeights="1219917 1276194 1254266 1225910">   <!-- A C G T -->
+</data>
+<data id="p26-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p26-alignment-original' 
+	  constantSiteWeights="1238053 1274475 1278989 1238542">   <!-- A C G T -->
+</data>
+<data id="p27.1-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p27.1-alignment-original' 
+	  constantSiteWeights="1249709 1281299 1306177 1253528">   <!-- A C G T -->
+</data>
+<data id="p27.2-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p27.2-alignment-original' 
+	  constantSiteWeights="1229631 1244509 1278999 1238573">   <!-- A C G T -->
+</data>
+<data id="p28-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p28-alignment-original' 
+	  constantSiteWeights="1275426 1314344 1317557 1270585">   <!-- A C G T -->
+</data>
+<data id="p29-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p29-alignment-original' 
+	  constantSiteWeights="1239957 1284721 1273212 1242480">   <!-- A C G T -->
+</data>
+<data id="p30.1-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p30.1-alignment-original' 
+	  constantSiteWeights="1306939 1319249 1342244 1306325">   <!-- A C G T -->
+</data>
+<data id="p30.2-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p30.2-alignment-original' 
+	  constantSiteWeights="1317940 1339375 1340547 1312982">   <!-- A C G T -->
+</data>
+<data id="p31-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p31-alignment-original' 
+	  constantSiteWeights="1207382 1230592 1241281 1201367">   <!-- A C G T -->
+</data>
+<data id="p32-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p32-alignment-original' 
+	  constantSiteWeights="1276958 1317253 1321453 1276118">   <!-- A C G T -->
+</data>
+<data id="p33-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p33-alignment-original' 
+	  constantSiteWeights="1310266 1338311 1351782 1309833">   <!-- A C G T -->
+</data>
+<data id="p34-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p34-alignment-original' 
+	  constantSiteWeights="1243829 1274022 1295944 1247206">   <!-- A C G T -->
+</data>
+<data id="p35-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p35-alignment-original' 
+	  constantSiteWeights="1261264 1299332 1301808 1259656">   <!-- A C G T -->
+</data>
+<data id="p37-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p37-alignment-original' 
+	  constantSiteWeights="1291751 1321706 1327116 1291132">   <!-- A C G T -->
+</data>
+<data id="p38-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p38-alignment-original' 
+	  constantSiteWeights="1272059 1306871 1311177 1270422">   <!-- A C G T -->
+</data>
+<data id="p39-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p39-alignment-original' 
+	  constantSiteWeights="1261899 1306262 1310262 1269557">   <!-- A C G T -->
+</data>
+<data id="p40-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p40-alignment-original' 
+	  constantSiteWeights="1258285 1292581 1304851 1259592">   <!-- A C G T -->
+</data>
+<data id="p41-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p41-alignment-original' 
+	  constantSiteWeights="1265663 1298886 1315417 1265879">   <!-- A C G T -->
+</data>
+<data id="p42-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p42-alignment-original' 
+	  constantSiteWeights="1313277 1335934 1331252 1314444">   <!-- A C G T -->
+</data>
+<data id="p43-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p43-alignment-original' 
+	  constantSiteWeights="1254228 1275696 1308086 1255747">   <!-- A C G T -->
+</data>
+<data id="p44-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p44-alignment-original' 
+	  constantSiteWeights="1241994 1288079 1268799 1239540">   <!-- A C G T -->
+</data>
+<data id="p45-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p45-alignment-original' 
+	  constantSiteWeights="1291847 1333134 1327184 1287396">   <!-- A C G T -->
+</data>
+<data id="p46-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p46-alignment-original' 
+	  constantSiteWeights="1258567 1288668 1302903 1268064">   <!-- A C G T -->
+</data>
+<data id="p47-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p47-alignment-original' 
+	  constantSiteWeights="1205186 1239428 1218545 1198040">   <!-- A C G T -->
+</data>
+<data id="p48.1-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p48.1-alignment-original' 
+	  constantSiteWeights="1188197 1226028 1211084 1187686">   <!-- A C G T -->
+</data>
+<data id="p48.2-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p48.2-alignment-original' 
+	  constantSiteWeights="1264210 1297193 1311892 1273211">   <!-- A C G T -->
+</data>
+<data id="p50-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p50-alignment-original' 
+	  constantSiteWeights="1271447 1294259 1305349 1280452">   <!-- A C G T -->
+</data>
+<data id="p51-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p51-alignment-original' 
+	  constantSiteWeights="1316182 1341887 1339482 1318347">   <!-- A C G T -->
+</data>
+<data id="p52-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p52-alignment-original' 
+	  constantSiteWeights="1290320 1321155 1323918 1288386">   <!-- A C G T -->
+</data>
+<data id="p53-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p53-alignment-original' 
+	  constantSiteWeights="1317915 1356268 1335759 1318488">   <!-- A C G T -->
+</data>
+<data id="p55-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p55-alignment-original' 
+	  constantSiteWeights="1317143 1347845 1337809 1321637">   <!-- A C G T -->
+</data>
+<data id="p56-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p56-alignment-original' 
+	  constantSiteWeights="1195604 1227798 1240462 1204464">   <!-- A C G T -->
+</data>
+<data id="p60-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p60-alignment-original' 
+	  constantSiteWeights="1282834 1310210 1309420 1286776">   <!-- A C G T -->
+</data>
+<data id="p61-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p61-alignment-original' 
+	  constantSiteWeights="1204312 1216694 1238591 1204761">   <!-- A C G T -->
+</data>
+<data id="p62-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p62-alignment-original' 
+	  constantSiteWeights="1297292 1338919 1323807 1293999">   <!-- A C G T -->
+</data>
+<data id="p63-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p63-alignment-original' 
+	  constantSiteWeights="1239049 1281732 1249480 1238963">   <!-- A C G T -->
+</data>
+<data id="p64-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p64-alignment-original' 
+	  constantSiteWeights="1266378 1282900 1300882 1270770">   <!-- A C G T -->
+</data>
+<data id="p65-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p65-alignment-original' 
+	  constantSiteWeights="1277265 1312039 1314459 1284221">   <!-- A C G T -->
+</data>
+<data id="p66-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p66-alignment-original' 
+	  constantSiteWeights="1294149 1336003 1336375 1301035">   <!-- A C G T -->
+</data>
+<data id="p68-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p68-alignment-original' 
+	  constantSiteWeights="1249235 1277253 1283848 1250527">   <!-- A C G T -->
+</data>
+<data id="p69-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p69-alignment-original' 
+	  constantSiteWeights="1281105 1311201 1322978 1297876">   <!-- A C G T -->
+</data>
+<data id="p71-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p71-alignment-original' 
+	  constantSiteWeights="1242571 1295438 1274050 1242278">   <!-- A C G T -->
+</data>
+<data id="p72-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p72-alignment-original' 
+	  constantSiteWeights="1291376 1320851 1344025 1300914">   <!-- A C G T -->
+</data>
+<data id="p73-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p73-alignment-original' 
+	  constantSiteWeights="1219607 1253569 1255687 1229067">   <!-- A C G T -->
+</data>
+
+
+<!-- Sampling dates -->
+<typeTrait id="dateTraitSet17" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet17" spec="TaxonSet">
+			<alignment idref="p17-alignment"/>
+        </taxa>
+</typeTrait>   
+<typeTrait id="dateTraitSet18" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet18" spec="TaxonSet">
+			<alignment idref="p18-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet21" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet21" spec="TaxonSet">
+			<alignment idref="p21-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet22" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet22" spec="TaxonSet">
+			<alignment idref="p22-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet24" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet24" spec="TaxonSet">
+			<alignment idref="p24-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet26" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet26" spec="TaxonSet">
+			<alignment idref="p26-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet27.1" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet27.1" spec="TaxonSet">
+			<alignment idref="p27.1-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet27.2" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet27.2" spec="TaxonSet">
+			<alignment idref="p27.2-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet28" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet28" spec="TaxonSet">
+			<alignment idref="p28-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet29" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet29" spec="TaxonSet">
+			<alignment idref="p29-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet30.1" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet30.1" spec="TaxonSet">
+			<alignment idref="p30.1-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet30.2" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet30.2" spec="TaxonSet">
+			<alignment idref="p30.2-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet31" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet31" spec="TaxonSet">
+			<alignment idref="p31-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet32" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet32" spec="TaxonSet">
+			<alignment idref="p32-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet33" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet33" spec="TaxonSet">
+			<alignment idref="p33-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet34" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet34" spec="TaxonSet">
+			<alignment idref="p34-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet35" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet35" spec="TaxonSet">
+			<alignment idref="p35-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet37" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet37" spec="TaxonSet">
+			<alignment idref="p37-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet38" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet38" spec="TaxonSet">
+			<alignment idref="p38-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet39" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet39" spec="TaxonSet">
+			<alignment idref="p39-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet40" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet40" spec="TaxonSet">
+			<alignment idref="p40-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet41" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet41" spec="TaxonSet">
+			<alignment idref="p41-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet42" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet42" spec="TaxonSet">
+			<alignment idref="p42-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet43" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet43" spec="TaxonSet">
+			<alignment idref="p43-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet44" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet44" spec="TaxonSet">
+			<alignment idref="p44-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet45" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet45" spec="TaxonSet">
+			<alignment idref="p45-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet46" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet46" spec="TaxonSet">
+			<alignment idref="p46-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet47" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet47" spec="TaxonSet">
+			<alignment idref="p47-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet48.1" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet48.1" spec="TaxonSet">
+			<alignment idref="p48.1-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet48.2" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet48.2" spec="TaxonSet">
+			<alignment idref="p48.2-alignment"/>
+        </taxa>
+</typeTrait>
+<typeTrait id="dateTraitSet50" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet50" spec="TaxonSet">
+			<alignment idref="p50-alignment"/>
+        </taxa>
+</typeTrait>      
+<typeTrait id="dateTraitSet51" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet51" spec="TaxonSet">
+			<alignment idref="p51-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet52" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet52" spec="TaxonSet">
+			<alignment idref="p52-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet53" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet53" spec="TaxonSet">
+			<alignment idref="p53-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet55" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet55" spec="TaxonSet">
+			<alignment idref="p55-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet56" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet56" spec="TaxonSet">
+			<alignment idref="p56-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet60" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet60" spec="TaxonSet">
+			<alignment idref="p60-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet61" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet61" spec="TaxonSet">
+			<alignment idref="p61-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet62" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet62" spec="TaxonSet">
+			<alignment idref="p62-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet63" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet63" spec="TaxonSet">
+			<alignment idref="p63-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet64" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet64" spec="TaxonSet">
+			<alignment idref="p64-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet65" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet65" spec="TaxonSet">
+			<alignment idref="p65-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet66" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet66" spec="TaxonSet">
+			<alignment idref="p66-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet68" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet68" spec="TaxonSet">
+			<alignment idref="p68-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet69" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet69" spec="TaxonSet">
+			<alignment idref="p69-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet71" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet71" spec="TaxonSet">
+			<alignment idref="p71-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet72" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet72" spec="TaxonSet">
+			<alignment idref="p72-alignment"/>
+        </taxa>
+</typeTrait> 
+<typeTrait id="dateTraitSet73" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet73" spec="TaxonSet">
+			<alignment idref="p73-alignment"/>
+        </taxa>
+</typeTrait> 
+
+    
+<map name="Uniform" >beast.base.inference.distribution.Uniform</map>
+<map name="Exponential" >beast.base.inference.distribution.Exponential</map>
+<map name="LogNormal" >beast.base.inference.distribution.LogNormalDistributionModel</map>
+<map name="Normal" >beast.base.inference.distribution.Normal</map>
+<map name="Beta" >beast.base.inference.distribution.Beta</map>
+<map name="Gamma" >beast.base.inference.distribution.Gamma</map>
+<map name="LaplaceDistribution" >beast.base.inference.distribution.LaplaceDistribution</map>
+<map name="prior" >beast.base.inference.distribution.Prior</map>
+<map name="InverseGamma" >beast.base.inference.distribution.InverseGamma</map>
+<map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
+
+
+<parameter id="mutationRate" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
+<parameter id="rateCT" spec="parameter.RealParameter" estimate="false" lower="0.0" name="rateCT">1.0</parameter>    
+
+<LogNormal id="LogNormalDistributionModel.clock" name="distr" meanInRealSpace="false">
+    <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" name="M">-13.815</parameter>
+    <parameter id="RealParameter.2" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>        
+</LogNormal>  
+
+<LogNormal id="LogNormalDistributionModel.multiplier" name="distr" meanInRealSpace="false">
+    <parameter id="RealParameter.3" spec="parameter.RealParameter" estimate="false" name="M">0</parameter>
+    <parameter id="RealParameter.4" spec="parameter.RealParameter" estimate="false" name="S">0.5</parameter>        
+</LogNormal>  
+   
+<Exponential id="Exponential.gamma" name="distr">
+    <parameter id="RealParameter.5" spec="parameter.RealParameter" estimate="false" name="mean">1.0</parameter>
+</Exponential>
+
+<Gamma id="Gamma.rateAC" name="distr">
+    <parameter id="RealParameter.6" spec="parameter.RealParameter" estimate="false" name="alpha">0.05</parameter>
+    <parameter id="RealParameter.7" spec="parameter.RealParameter" estimate="false" name="beta">10.0</parameter>
+</Gamma>
+            
+<Gamma id="Gamma.rateAG" name="distr">
+    <parameter id="RealParameter.8" spec="parameter.RealParameter" estimate="false" name="alpha">0.05</parameter>
+    <parameter id="RealParameter.9" spec="parameter.RealParameter" estimate="false" name="beta">20.0</parameter>
+</Gamma>  
+
+<OneOnX id="OneOnX.popSize" name="distr"/>
+
+<Uniform id="Uniform.propInvar" name="distr" lower="0" upper="1"/>
+
+<plate var='n' range='17,18,21,22,24,26,27.1,27.2,28,29,30.1,30.2,31,32,33,34,35,37,38,39,40,41,42,43,44,45,46,47,48.1,48.2,50,51,52,53,55,56,60,61,62,63,64,65,66,68,69,71,72,73'>
+    <clockrate id="clockRate$(n)" spec="feast.expressions.ExpCalculator">
+        <![CDATA[
+    		clock_shared * multiplier$(n)
+        	]]>
+    	<arg idref="clock_shared"/>
+    	<arg idref="multiplier$(n)"/>  
+    </clockrate>  
+</plate>
+
+
+<!-- MCMC -->
+
+<run id="mcmc" spec="MCMC" chainLength="1000000000000" sampleFromPrior='false'>
+
+    <state id="state" spec="State" storeEvery="10000">
+
+        <parameter id="rateAC" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateAG" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateAT" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateCG" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateGT" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="gammaShape" spec="parameter.RealParameter" lower="0.1" name="stateNode">1.0</parameter>
+		<parameter id="clock_shared" spec="parameter.RealParameter" dimension="1" lower="1E-9" upper="1E-3" name="stateNode">1.0E-6</parameter>
+
+        <plate var='n' range='17,18,21,22,24,26,27.1,27.2,28,29,30.1,30.2,31,32,33,34,35,37,38,39,40,41,42,43,44,45,46,47,48.1,48.2,50,51,52,53,55,56,60,61,62,63,64,65,66,68,69,71,72,73'>
+
+            <tree id="Tree$(n)" spec="beast.base.evolution.tree.coalescent.RandomTree" taxa="@p$(n)-alignment" name="stateNode">
+                <populationModel spec="beast.base.evolution.tree.coalescent.ConstantPopulation" popSize="1.0"/>
+                <trait idref="dateTraitSet$(n)"/>
+			    <taxonset idref="TaxonSet$(n)"/>
+            </tree>
+            <parameter id="multiplier$(n)" spec="parameter.RealParameter" lower="0.001" upper="1000" name="stateNode">1.0</parameter>
+            <parameter id="popSize$(n)" spec="parameter.RealParameter" lower="0.0" upper="1000" name="stateNode">0.3</parameter>
+            <parameter id="proportionInvariant$(n)" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.9</parameter>
+        
+        </plate>
+
+    </state>
+
+	<!-- Posterior -->
+
+    <distribution id="posterior" spec="CompoundDistribution">
+
+        <!-- Prior -->
+
+        <distribution id="prior" spec="CompoundDistribution">
+
+        	<!-- Tree prior -->
+
+            <plate var='n' range='17,18,21,22,24,26,27.1,27.2,28,29,30.1,30.2,31,32,33,34,35,37,38,39,40,41,42,43,44,45,46,47,48.1,48.2,50,51,52,53,55,56,60,61,62,63,64,65,66,68,69,71,72,73'>
+                <distribution id="CoalescentConstant$(n)" spec="Coalescent">
+                    <populationModel id="ConstantPopulation$(n)" spec="ConstantPopulation" popSize="@popSize$(n)"/>
+                    <treeIntervals id="TreeIntervals$(n)" spec="beast.base.evolution.tree.TreeIntervals" tree="@Tree$(n)"/>
+                </distribution>
+            </plate>
+    
+            <prior id="GammaShapePrior" name="distribution" x="@gammaShape" distr="@Exponential.gamma"/>
+            <prior id="RateACPrior" name="distribution" x="@rateAC" distr="@Gamma.rateAC"/>
+            <prior id="RateAGPrior" name="distribution" x="@rateAG" distr="@Gamma.rateAG"/>
+            <prior id="RateATPrior" name="distribution" x="@rateAT" distr="@Gamma.rateAC"/>
+            <prior id="RateCGPrior" name="distribution" x="@rateCG" distr="@Gamma.rateAC"/>
+            <prior id="RateGTPrior" name="distribution" x="@rateGT" distr="@Gamma.rateAC"/>
+			<prior id="ClockPrior" name="distribution" x="@clock_shared" distr="@LogNormalDistributionModel.clock"/>
+
+            <plate var='n' range='17,18,21,22,24,26,27.1,27.2,28,29,30.1,30.2,31,32,33,34,35,37,38,39,40,41,42,43,44,45,46,47,48.1,48.2,50,51,52,53,55,56,60,61,62,63,64,65,66,68,69,71,72,73'>
+                <prior id="multiplierPrior$(n)" name="distribution" x="@multiplier$(n)" distr="@LogNormalDistributionModel.multiplier"/>
+                <prior id="PopSizePrior$(n)" name="distribution" x="@popSize$(n)" distr="@OneOnX.popSize"/>
+                <prior id="proportionInvariantPrior$(n)" name="distribution" x="@proportionInvariant$(n)" distr="@Uniform.propInvar"/>
+            </plate>
+        
+        </distribution>
+
+        <!-- Tree likelihood -->
+
+        <distribution id="likelihood" spec="CompoundDistribution" useThreads="true">
+
+            <plate var='n' range='17,18,21,22,24,26,27.1,27.2,28,29,30.1,30.2,31,32,33,34,35,37,38,39,40,41,42,43,44,45,46,47,48.1,48.2,50,51,52,53,55,56,60,61,62,63,64,65,66,68,69,71,72,73'>
+                <distribution id="treeLikelihood$(n)" spec="ThreadedTreeLikelihood" data="@p$(n)-alignment" tree="@Tree$(n)">
+                    <siteModel id="SiteModel$(n)" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape" proportionInvariant="@proportionInvariant$(n)" mutationRate="@mutationRate">
+                        <substModel id="gtr$(n)" spec="GTR" rateAC="@rateAC" rateAG="@rateAG" rateAT="@rateAT" rateCG="@rateCG" rateGT="@rateGT" rateCT="@rateCT">
+                            <frequencies id="empiricalFreqs$(n)" spec="Frequencies" data="@p$(n)-alignment"/>
+                        </substModel>
+                    </siteModel>
+                    <branchRateModel id="StrictClock$(n)" spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate$(n)"/>
+                </distribution>
+            </plate>
+    
+        </distribution>
+
+    </distribution>
+    
+    
+
+    <!-- Operators -->
+    
+    <!-- Substitution model operators -->
+
+    <operator id="RateACScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateAC" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateAGScalerX" spec="kernel.BactrianScaleOperator"    parameter="@rateAG" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateATScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateAT" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateCGScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateCG" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateGTScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateGT" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="gammaShapeScalerX" spec="kernel.BactrianScaleOperator" parameter="@gammaShape" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="StrictClockRateScalerX" spec="kernel.BactrianScaleOperator" parameter="@clock_shared" upper="10.0" weight="5.0"/>
+
+    <plate var='n' range='17,18,21,22,24,26,27.1,27.2,28,29,30.1,30.2,31,32,33,34,35,37,38,39,40,41,42,43,44,45,46,47,48.1,48.2,50,51,52,53,55,56,60,61,62,63,64,65,66,68,69,71,72,73'>
+
+	<operator id="strictClockUpDownOperatorX$(n)" spec="operator.kernel.BactrianUpDownOperator" scaleFactor="0.75" weight="5.0">
+            <up idref="clock_shared"/>
+            <down idref="Tree$(n)"/>
+    </operator>
+
+    <operator id="multiplierScalerX$(n)" spec="kernel.BactrianScaleOperator" parameter="@multiplier$(n)" weight="10.0"/>
+
+	<operator id="propInvarScaler$(n)" spec="kernel.BactrianScaleOperator" parameter="@proportionInvariant$(n)" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+ 
+    <operator id="CoalescentConstantBICEPSEpochTop$(n)" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree$(n)" weight="2.0"/>
+    <operator id="CoalescentConstantBICEPSEpochAll$(n)" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree$(n)" weight="2.0"/>
+    <operator id="CoalescentConstantBICEPSTreeFlex$(n)" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree$(n)" weight="2.0"/>
+    <operator id="CoalescentConstantTreeRootScaler$(n)" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree$(n)" upper="10.0" weight="3.0"/>
+    <operator id="CoalescentConstantUniformOperator$(n)" spec="kernel.BactrianNodeOperator" tree="@Tree$(n)" weight="30.0"/>
+    <operator id="CoalescentConstantSubtreeSlide$(n)" spec="kernel.BactrianSubtreeSlide" tree="@Tree$(n)" weight="15.0"/>
+    <operator id="CoalescentConstantNarrow$(n)" spec="Exchange" tree="@Tree$(n)" weight="15.0"/>
+    <operator id="CoalescentConstantWide$(n)" spec="Exchange" isNarrow="false" tree="@Tree$(n)" weight="3.0"/>
+    <operator id="CoalescentConstantWilsonBalding$(n)" spec="WilsonBalding" tree="@Tree$(n)" weight="3.0"/>
+    <operator id="PopSizeScaler$(n)" spec="kernel.BactrianScaleOperator" parameter="@popSize$(n)" upper="10.0" weight="3.0"/>
+
+    </plate>
+
+
+    <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="100000" model="@posterior" sanitiseHeaders="true" sort="smart">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+        <log idref="rateAC"/>
+        <log idref="rateAG"/>
+        <log idref="rateAT"/>
+        <log idref="rateCG"/>
+        <log idref="rateGT"/>
+        <log idref="gammaShape"/>
+        <log idref="clock_shared"/>
+        <plate var='n' range='17,18,21,22,24,26,27.1,27.2,28,29,30.1,30.2,31,32,33,34,35,37,38,39,40,41,42,43,44,45,46,47,48.1,48.2,50,51,52,53,55,56,60,61,62,63,64,65,66,68,69,71,72,73'>
+            <log idref="treeLikelihood$(n)"/>
+            <log id="TreeHeight$(n)" spec="beast.base.evolution.tree.TreeStatLogger" tree="@Tree$(n)"/>
+            <log idref="clockRate$(n)"/>
+            <log idref="multiplier$(n)"/>
+            <log idref="popSize$(n)"/>
+            <log idref="CoalescentConstant$(n)"/>
+        </plate>
+    </logger>
+
+    <logger id="screenlog" spec="Logger" logEvery="100000">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+    </logger>
+
+    <plate var='n' range='17,18,21,22,24,26,27.1,27.2,28,29,30.1,30.2,31,32,33,34,35,37,38,39,40,41,42,43,44,45,46,47,48.1,48.2,50,51,52,53,55,56,60,61,62,63,64,65,66,68,69,71,72,73'>
+        <logger id="treelog$(n)" spec="Logger" fileName="$(filebase).p$(n).trees" logEvery="100000" mode="tree">
+            <log id="TreeWithMetaDataLogger$(n)" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree$(n)" dp="5"/>
+        </logger>
+    </plate>
+
+    <operatorschedule id="OperatorSchedule" spec="OperatorSchedule"/>
+</run>
+
+</beast>

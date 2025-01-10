@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood:feast.fileio:feast.parameter:feast.function:feast.expressions:feast.modelselect" required="BEAST.base v2.7.6" version="2.7">
+
+
+<!-- Data -->
+
+<!-- Alignments -->
+<data id="p1-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat01_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p2-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat02_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p3-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat03_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p4-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat04_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p5-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat05_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p6-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat06_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p7-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat07_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p8-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat08_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p9-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat09_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p10-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat10_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p11-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat11_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p12-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat12_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p13-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat13_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p14-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat14_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p15-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat15_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p16-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat16_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p17-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat17_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p18-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat18_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p19-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat19_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+
+<!-- Alignments corrected with invariant sites -->
+<data id="p1-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p1-alignment-original' 
+	  constantSiteWeights="1221188 1619153 1598175 1216151">   <!-- A C G T -->
+</data>
+<data id="p2-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p2-alignment-original' 
+	  constantSiteWeights="1157735 1583891 1573814 1157101">   <!-- A C G T -->
+</data>
+<data id="p3-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p3-alignment-original' 
+	  constantSiteWeights="1146146 1543190 1556060 1153762">   <!-- A C G T -->
+</data>
+<data id="p4-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p4-alignment-original' 
+	  constantSiteWeights="1184081 1586503 1582105 1181926">   <!-- A C G T -->
+</data>
+<data id="p5-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p5-alignment-original' 
+	  constantSiteWeights="1196097 1600415 1591182 1193140">   <!-- A C G T -->
+</data>
+<data id="p6-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p6-alignment-original' 
+	  constantSiteWeights="1157867 1537884 1574620 1166556">   <!-- A C G T -->
+</data>
+<data id="p7-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p7-alignment-original' 
+	  constantSiteWeights="1160847 1542679 1590623 1169050">   <!-- A C G T -->
+</data>
+<data id="p8-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p8-alignment-original' 
+	  constantSiteWeights="1155473 1545975 1559127 1157159">   <!-- A C G T -->
+</data>
+<data id="p9-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p9-alignment-original' 
+	  constantSiteWeights="1192888 1579599 1592638 1192333">   <!-- A C G T -->
+</data>
+<data id="p10-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p10-alignment-original' 
+	  constantSiteWeights="1145920 1548067 1526394 1141958">   <!-- A C G T -->
+</data>
+<data id="p11-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p11-alignment-original' 
+	  constantSiteWeights="1137427 1511563 1560011 1143096">   <!-- A C G T -->
+</data>
+<data id="p12-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p12-alignment-original' 
+	  constantSiteWeights="1176884 1559052 1603306 1188130">   <!-- A C G T -->
+</data>
+<data id="p13-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p13-alignment-original' 
+	  constantSiteWeights="1177318 1583475 1564530 1172337">   <!-- A C G T -->
+</data>
+<data id="p14-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p14-alignment-original' 
+	  constantSiteWeights="1151652 1542564 1557189 1154370">   <!-- A C G T -->
+</data>
+<data id="p15-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p15-alignment-original' 
+	  constantSiteWeights="1144913 1536770 1556217 1154514">   <!-- A C G T -->
+</data>
+<data id="p16-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p16-alignment-original' 
+	  constantSiteWeights="1110976 1514335 1490489 1106494">   <!-- A C G T -->
+</data>
+<data id="p17-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p17-alignment-original' 
+	  constantSiteWeights="1168462 1580173 1550180 1166679">   <!-- A C G T -->
+</data>
+<data id="p18-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p18-alignment-original' 
+	  constantSiteWeights="1092215 1525475 1506195 1098337">   <!-- A C G T -->
+</data>
+<data id="p19-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p19-alignment-original' 
+	  constantSiteWeights="1181877 1579708 1583569  1178661">   <!-- A C G T -->
+</data>
+
+<!-- Sampling dates -->
+<typeTrait id="dateTraitSet1" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet1" spec="TaxonSet">
+			<alignment idref="p1-alignment"/>
+        </taxa>
+</typeTrait>   
+<typeTrait id="dateTraitSet2" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet2" spec="TaxonSet">
+			<alignment idref="p2-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet3" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet3" spec="TaxonSet">
+			<alignment idref="p3-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet4" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet4" spec="TaxonSet">
+			<alignment idref="p4-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet5" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet5" spec="TaxonSet">
+			<alignment idref="p5-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet6" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet6" spec="TaxonSet">
+			<alignment idref="p6-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet7" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet7" spec="TaxonSet">
+			<alignment idref="p7-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet8" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet8" spec="TaxonSet">
+			<alignment idref="p8-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet9" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet9" spec="TaxonSet">
+			<alignment idref="p9-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet10" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet10" spec="TaxonSet">
+			<alignment idref="p10-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet11" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet11" spec="TaxonSet">
+			<alignment idref="p11-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet12" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet12" spec="TaxonSet">
+			<alignment idref="p12-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet13" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet13" spec="TaxonSet">
+			<alignment idref="p13-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet14" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet14" spec="TaxonSet">
+			<alignment idref="p14-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet15" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet15" spec="TaxonSet">
+			<alignment idref="p15-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet16" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet16" spec="TaxonSet">
+			<alignment idref="p16-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet17" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet17" spec="TaxonSet">
+			<alignment idref="p17-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet18" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet18" spec="TaxonSet">
+			<alignment idref="p18-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet19" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet19" spec="TaxonSet">
+			<alignment idref="p19-alignment"/>
+        </taxa>
+</typeTrait>  
+
+    
+<map name="Uniform" >beast.base.inference.distribution.Uniform</map>
+<map name="Exponential" >beast.base.inference.distribution.Exponential</map>
+<map name="LogNormal" >beast.base.inference.distribution.LogNormalDistributionModel</map>
+<map name="Normal" >beast.base.inference.distribution.Normal</map>
+<map name="Beta" >beast.base.inference.distribution.Beta</map>
+<map name="Gamma" >beast.base.inference.distribution.Gamma</map>
+<map name="LaplaceDistribution" >beast.base.inference.distribution.LaplaceDistribution</map>
+<map name="prior" >beast.base.inference.distribution.Prior</map>
+<map name="InverseGamma" >beast.base.inference.distribution.InverseGamma</map>
+<map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
+
+
+<parameter id="mutationRate" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
+<parameter id="rateCT" spec="parameter.RealParameter" estimate="false" lower="0.0" name="rateCT">1.0</parameter>    
+
+<LogNormal id="LogNormalDistributionModel.clock" name="distr" meanInRealSpace="false">
+    <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" name="M">-13.815</parameter>
+    <parameter id="RealParameter.2" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>        
+</LogNormal>  
+
+<LogNormal id="LogNormalDistributionModel.multiplier" name="distr" meanInRealSpace="false">
+    <parameter id="RealParameter.3" spec="parameter.RealParameter" estimate="false" name="M">0</parameter>
+    <parameter id="RealParameter.4" spec="parameter.RealParameter" estimate="false" name="S">0.5</parameter>        
+</LogNormal>  
+   
+<Exponential id="Exponential.gamma" name="distr">
+    <parameter id="RealParameter.5" spec="parameter.RealParameter" estimate="false" name="mean">1.0</parameter>
+</Exponential>
+
+<Gamma id="Gamma.rateAC" name="distr">
+    <parameter id="RealParameter.6" spec="parameter.RealParameter" estimate="false" name="alpha">0.05</parameter>
+    <parameter id="RealParameter.7" spec="parameter.RealParameter" estimate="false" name="beta">10.0</parameter>
+</Gamma>
+            
+<Gamma id="Gamma.rateAG" name="distr">
+    <parameter id="RealParameter.8" spec="parameter.RealParameter" estimate="false" name="alpha">0.05</parameter>
+    <parameter id="RealParameter.9" spec="parameter.RealParameter" estimate="false" name="beta">20.0</parameter>
+</Gamma>  
+
+<OneOnX id="OneOnX.popSize" name="distr"/>
+
+<Uniform id="Uniform.propInvar" name="distr" lower="0" upper="1"/>
+
+<plate var='ST' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16'>
+    <clockrate id="clockRate$(ST)" spec="feast.expressions.ExpCalculator">
+        <![CDATA[
+    		clock_shared * multiplier$(ST)
+        	]]>
+    	<arg idref="clock_shared"/>
+    	<arg idref="multiplier$(ST)"/>  
+    </clockrate>  
+</plate>
+
+
+<!-- MCMC -->
+
+<run id="mcmc" spec="MCMC" chainLength="1000000000000" sampleFromPrior='false'>
+
+    <state id="state" spec="State" storeEvery="10000">
+
+        <parameter id="rateAC" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateAG" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateAT" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateCG" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateGT" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="gammaShape" spec="parameter.RealParameter" lower="0.1" name="stateNode">1.0</parameter>
+        <parameter id="clock_shared" spec="parameter.RealParameter" dimension="1" lower="1E-9" upper="1E-3" name="stateNode">1.0E-6</parameter>
+
+        <plate var='patient' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19'>
+
+            <tree id="Tree$(patient)" spec="beast.base.evolution.tree.coalescent.RandomTree" taxa="@p$(patient)-alignment" name="stateNode">
+                <populationModel spec="beast.base.evolution.tree.coalescent.ConstantPopulation" popSize="1.0"/>
+                <trait idref="dateTraitSet$(patient)"/>
+			    <taxonset idref="TaxonSet$(patient)"/>
+            </tree>
+            <parameter id="popSize$(patient)" spec="parameter.RealParameter" lower="0.0" upper="1000" name="stateNode">0.3</parameter>
+            <parameter id="proportionInvariant$(patient)" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.9</parameter>
+        
+        </plate>
+
+        <plate var='ST' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16'>
+            <parameter id="multiplier$(ST)" spec="parameter.RealParameter" lower="0.001" upper="1000" name="stateNode">1.0</parameter>
+        </plate>
+
+    </state>
+
+	<!-- Posterior -->
+
+    <distribution id="posterior" spec="CompoundDistribution">
+
+        <!-- Prior -->
+
+        <distribution id="prior" spec="CompoundDistribution">
+
+        	<!-- Tree prior -->
+
+            <plate var='patient' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19'>
+                <distribution id="CoalescentConstant$(patient)" spec="Coalescent">
+                    <populationModel id="ConstantPopulation$(patient)" spec="ConstantPopulation" popSize="@popSize$(patient)"/>
+                    <treeIntervals id="TreeIntervals$(patient)" spec="beast.base.evolution.tree.TreeIntervals" tree="@Tree$(patient)"/>
+                </distribution>
+            </plate>
+    
+            <prior id="GammaShapePrior" name="distribution" x="@gammaShape" distr="@Exponential.gamma"/>
+            <prior id="RateACPrior" name="distribution" x="@rateAC" distr="@Gamma.rateAC"/>
+            <prior id="RateAGPrior" name="distribution" x="@rateAG" distr="@Gamma.rateAG"/>
+            <prior id="RateATPrior" name="distribution" x="@rateAT" distr="@Gamma.rateAC"/>
+            <prior id="RateCGPrior" name="distribution" x="@rateCG" distr="@Gamma.rateAC"/>
+            <prior id="RateGTPrior" name="distribution" x="@rateGT" distr="@Gamma.rateAC"/>
+            <prior id="ClockPrior" name="distribution" x="@clock_shared" distr="@LogNormalDistributionModel.clock"/>
+
+            <plate var='ST' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16'> 
+                <prior id="multiplierPrior$(ST)" name="distribution" x="@multiplier$(ST)" distr="@LogNormalDistributionModel.multiplier"/>
+            </plate>
+
+            <plate var='patient' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19'>
+                <prior id="PopSizePrior$(patient)" name="distribution" x="@popSize$(patient)" distr="@OneOnX.popSize"/>
+                <prior id="proportionInvariantPrior$(patient)" name="distribution" x="@proportionInvariant$(patient)" distr="@Uniform.propInvar"/>
+            </plate>
+
+        </distribution>
+
+        <!-- Tree likelihood -->
+
+        <distribution id="likelihood" spec="CompoundDistribution" useThreads="true">
+
+            <plate var='n' range='1,2,3,4,5,6,7,9,10,11,12'>
+                <distribution id="treeLikelihood$(n)" spec="ThreadedTreeLikelihood" data="@p$(n)-alignment" tree="@Tree$(n)">
+                    <siteModel id="SiteModel$(n)" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape" proportionInvariant="@proportionInvariant$(n)" mutationRate="@mutationRate">
+                        <substModel id="gtr$(n)" spec="GTR" rateAC="@rateAC" rateAG="@rateAG" rateAT="@rateAT" rateCG="@rateCG" rateGT="@rateGT" rateCT="@rateCT">
+                            <frequencies id="empiricalFreqs$(n)" spec="Frequencies" data="@p$(n)-alignment"/>
+                        </substModel>
+                    </siteModel>
+                    <branchRateModel id="StrictClock$(n)" spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate$(n)"/>
+                </distribution>
+            </plate>
+
+           <plate var='n' range='8,15,17'>
+                <distribution id="treeLikelihood$(n)" spec="ThreadedTreeLikelihood" data="@p$(n)-alignment" tree="@Tree$(n)">
+                    <siteModel id="SiteModel$(n)" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape" proportionInvariant="@proportionInvariant$(n)" mutationRate="@mutationRate">
+                        <substModel id="gtr$(n)" spec="GTR" rateAC="@rateAC" rateAG="@rateAG" rateAT="@rateAT" rateCG="@rateCG" rateGT="@rateGT" rateCT="@rateCT">
+                            <frequencies id="empiricalFreqs$(n)" spec="Frequencies" data="@p$(n)-alignment"/>
+                        </substModel>
+                    </siteModel>
+                    <branchRateModel spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate8"/>
+                </distribution>
+            </plate>
+
+            <plate var='n' range='13,14'>
+                <distribution id="treeLikelihood$(n)" spec="ThreadedTreeLikelihood" data="@p$(n)-alignment" tree="@Tree$(n)">
+                    <siteModel id="SiteModel$(n)" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape" proportionInvariant="@proportionInvariant$(n)" mutationRate="@mutationRate">
+                        <substModel id="gtr$(n)" spec="GTR" rateAC="@rateAC" rateAG="@rateAG" rateAT="@rateAT" rateCG="@rateCG" rateGT="@rateGT" rateCT="@rateCT">
+                            <frequencies id="empiricalFreqs$(n)" spec="Frequencies" data="@p$(n)-alignment"/>
+                        </substModel>
+                    </siteModel>
+                    <branchRateModel spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate13"/>
+                </distribution>
+            </plate>
+
+                <distribution id="treeLikelihood16" spec="ThreadedTreeLikelihood" data="@p16-alignment" tree="@Tree16">
+                    <siteModel id="SiteModel16" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape" proportionInvariant="@proportionInvariant16" mutationRate="@mutationRate">
+                        <substModel id="gtr16" spec="GTR" rateAC="@rateAC" rateAG="@rateAG" rateAT="@rateAT" rateCG="@rateCG" rateGT="@rateGT" rateCT="@rateCT">
+                            <frequencies id="empiricalFreqs16" spec="Frequencies" data="@p16-alignment"/>
+                        </substModel>
+                    </siteModel>
+                    <branchRateModel id="StrictClock14" spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate14"/>
+                </distribution>
+
+                <distribution id="treeLikelihood18" spec="ThreadedTreeLikelihood" data="@p18-alignment" tree="@Tree18">
+                    <siteModel id="SiteModel18" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape" proportionInvariant="@proportionInvariant18" mutationRate="@mutationRate">
+                        <substModel id="gtr18" spec="GTR" rateAC="@rateAC" rateAG="@rateAG" rateAT="@rateAT" rateCG="@rateCG" rateGT="@rateGT" rateCT="@rateCT">
+                            <frequencies id="empiricalFreqs18" spec="Frequencies" data="@p18-alignment"/>
+                        </substModel>
+                    </siteModel>
+                    <branchRateModel id="StrictClock15" spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate15"/>
+                </distribution>
+
+                <distribution id="treeLikelihood19" spec="ThreadedTreeLikelihood" data="@p19-alignment" tree="@Tree19">
+                    <siteModel id="SiteModel19" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape" proportionInvariant="@proportionInvariant19" mutationRate="@mutationRate">
+                        <substModel id="gtr19" spec="GTR" rateAC="@rateAC" rateAG="@rateAG" rateAT="@rateAT" rateCG="@rateCG" rateGT="@rateGT" rateCT="@rateCT">
+                            <frequencies id="empiricalFreqs19" spec="Frequencies" data="@p19-alignment"/>
+                        </substModel>
+                    </siteModel>
+                    <branchRateModel id="StrictClock16" spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate16"/>
+                </distribution>                
+    
+        </distribution>
+
+    </distribution>
+    
+    
+
+    <!-- Operators -->
+    
+    <!-- Substitution model operators -->
+
+    <operator id="RateACScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateAC" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateAGScalerX" spec="kernel.BactrianScaleOperator"    parameter="@rateAG" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateATScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateAT" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateCGScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateCG" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateGTScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateGT" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="gammaShapeScalerX" spec="kernel.BactrianScaleOperator" parameter="@gammaShape" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="StrictClockRateScalerX" spec="kernel.BactrianScaleOperator" parameter="@clock_shared" upper="10.0" weight="5.0"/>
+
+
+    <plate var='ST' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16'>
+        <operator id="multiplierScalerX$(ST)" spec="kernel.BactrianScaleOperator" parameter="@multiplier$(ST)" weight="10.0"/>
+    </plate>
+
+    <plate var='patient' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19'>
+
+    <operator id="strictClockUpDownOperatorX$(patient)" spec="operator.kernel.BactrianUpDownOperator" scaleFactor="0.75" weight="5.0">
+        <up idref="clock_shared"/>
+        <down idref="Tree$(patient)"/>
+    </operator>
+
+    <operator id="propInvarScaler$(patient)" spec="kernel.BactrianScaleOperator" parameter="@proportionInvariant$(patient)" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="CoalescentConstantBICEPSEpochTop$(patient)" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree$(patient)" weight="2.0"/>
+    <operator id="CoalescentConstantBICEPSEpochAll$(patient)" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree$(patient)" weight="2.0"/>
+    <operator id="CoalescentConstantBICEPSTreeFlex$(patient)" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree$(patient)" weight="2.0"/>
+    <operator id="CoalescentConstantTreeRootScaler$(patient)" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree$(patient)" upper="10.0" weight="3.0"/>
+    <operator id="CoalescentConstantUniformOperator$(patient)" spec="kernel.BactrianNodeOperator" tree="@Tree$(patient)" weight="30.0"/>
+    <operator id="CoalescentConstantSubtreeSlide$(patient)" spec="kernel.BactrianSubtreeSlide" tree="@Tree$(patient)" weight="15.0"/>
+    <operator id="CoalescentConstantNarrow$(patient)" spec="Exchange" tree="@Tree$(patient)" weight="15.0"/>
+    <operator id="CoalescentConstantWide$(patient)" spec="Exchange" isNarrow="false" tree="@Tree$(patient)" weight="3.0"/>
+    <operator id="CoalescentConstantWilsonBalding$(patient)" spec="WilsonBalding" tree="@Tree$(patient)" weight="3.0"/>
+    <operator id="PopSizeScaler$(patient)" spec="kernel.BactrianScaleOperator" parameter="@popSize$(patient)" upper="10.0" weight="3.0"/>
+
+    </plate>
+
+
+    <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="100000" model="@posterior" sanitiseHeaders="true" sort="smart">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+        <log idref="rateAC"/>
+        <log idref="rateAG"/>
+        <log idref="rateAT"/>
+        <log idref="rateCG"/>
+        <log idref="rateGT"/>
+        <log idref="gammaShape"/>
+        <log idref="clock_shared"/>
+        <plate var='patient' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19'>
+            <log idref="treeLikelihood$(patient)"/>
+            <log id="TreeHeight$(patient)" spec="beast.base.evolution.tree.TreeStatLogger" tree="@Tree$(patient)"/>
+            <log idref="popSize$(patient)"/>
+            <log idref="CoalescentConstant$(patient)"/>
+        </plate>
+        <plate var='ST' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16'>
+            <log idref="clockRate$(ST)"/>
+            <log idref="multiplier$(ST)"/>
+        </plate>
+    </logger>
+
+    <logger id="screenlog" spec="Logger" logEvery="100000">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+    </logger>
+
+    <plate var='patient' range='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19'>
+        <logger id="treelog$(patient)" spec="Logger" fileName="$(filebase).p$(patient).trees" logEvery="100000" mode="tree">
+            <log id="TreeWithMetaDataLogger$(patient)" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree$(patient)" dp="5"/>
+        </logger>
+    </plate>
+
+    <operatorschedule id="OperatorSchedule" spec="OperatorSchedule"/>
+</run>
+
+</beast>

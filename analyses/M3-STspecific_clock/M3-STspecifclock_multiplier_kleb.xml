@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood:feast.fileio:feast.parameter:feast.function:feast.expressions:feast.modelselect" required="BEAST.base v2.7.6" version="2.7">
+
+
+<!-- Data -->
+
+<!-- Alignments -->
+<data id="p8-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat08_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p15-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat15_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+<data id="p17-alignment-original" 
+	spec="feast.fileio.AlignmentFromNexus" 
+	fileName="../../../data/alignments/beast_input/kleb/pat17_concat_newid_varpos.nex"
+  	name="alignment">
+</data>
+
+<!-- Alignments corrected with invariant sites -->
+<data id="p8-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p8-alignment-original' 
+	  constantSiteWeights="1155473 1545975 1559127 1157159">   <!-- A C G T -->
+</data>
+<data id="p15-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p15-alignment-original' 
+	  constantSiteWeights="1144913 1536770 1556217 1154514">   <!-- A C G T -->
+</data>
+<data id="p17-alignment" 
+	  spec='FilteredAlignment' 
+	  filter='-' 
+	  data='@p17-alignment-original' 
+	  constantSiteWeights="1168462 1580173 1550180 1166679">   <!-- A C G T -->
+</data>
+
+<!-- Sampling dates -->
+<typeTrait id="dateTraitSet8" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet8" spec="TaxonSet">
+			<alignment idref="p8-alignment"/>
+        </taxa>
+</typeTrait>   
+<typeTrait id="dateTraitSet15" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet15" spec="TaxonSet">
+			<alignment idref="p15-alignment"/>
+        </taxa>
+</typeTrait>  
+<typeTrait id="dateTraitSet17" spec="feast.fileio.TraitSetFromTaxonSet" 
+		   dateFormat="yyyy-MM-dd" traitname="date" 
+           delimiter= "/"  
+           takeGroup="2">		
+ 		<taxa id="TaxonSet17" spec="TaxonSet">
+			<alignment idref="p17-alignment"/>
+        </taxa>
+</typeTrait>   
+
+    
+<map name="Uniform" >beast.base.inference.distribution.Uniform</map>
+<map name="Exponential" >beast.base.inference.distribution.Exponential</map>
+<map name="LogNormal" >beast.base.inference.distribution.LogNormalDistributionModel</map>
+<map name="Normal" >beast.base.inference.distribution.Normal</map>
+<map name="Beta" >beast.base.inference.distribution.Beta</map>
+<map name="Gamma" >beast.base.inference.distribution.Gamma</map>
+<map name="LaplaceDistribution" >beast.base.inference.distribution.LaplaceDistribution</map>
+<map name="prior" >beast.base.inference.distribution.Prior</map>
+<map name="InverseGamma" >beast.base.inference.distribution.InverseGamma</map>
+<map name="OneOnX" >beast.base.inference.distribution.OneOnX</map>
+
+
+<parameter id="mutationRate" spec="parameter.RealParameter" estimate="false" name="mutationRate">1.0</parameter>
+<parameter id="rateCT" spec="parameter.RealParameter" estimate="false" lower="0.0" name="rateCT">1.0</parameter>    
+
+<LogNormal id="LogNormalDistributionModel.clock" name="distr" meanInRealSpace="false">
+    <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" name="M">-13.815</parameter>
+    <parameter id="RealParameter.2" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>        
+</LogNormal>  
+
+<LogNormal id="LogNormalDistributionModel.multiplier" name="distr" meanInRealSpace="false">
+    <parameter id="RealParameter.3" spec="parameter.RealParameter" estimate="false" name="M">0</parameter>
+    <parameter id="RealParameter.4" spec="parameter.RealParameter" estimate="false" name="S">0.5</parameter>        
+</LogNormal>  
+   
+<Exponential id="Exponential.gamma" name="distr">
+    <parameter id="RealParameter.5" spec="parameter.RealParameter" estimate="false" name="mean">1.0</parameter>
+</Exponential>
+
+<Gamma id="Gamma.rateAC" name="distr">
+    <parameter id="RealParameter.6" spec="parameter.RealParameter" estimate="false" name="alpha">0.05</parameter>
+    <parameter id="RealParameter.7" spec="parameter.RealParameter" estimate="false" name="beta">10.0</parameter>
+</Gamma>
+            
+<Gamma id="Gamma.rateAG" name="distr">
+    <parameter id="RealParameter.8" spec="parameter.RealParameter" estimate="false" name="alpha">0.05</parameter>
+    <parameter id="RealParameter.9" spec="parameter.RealParameter" estimate="false" name="beta">20.0</parameter>
+</Gamma>  
+
+<OneOnX id="OneOnX.popSize" name="distr"/>
+
+<Uniform id="Uniform.propInvar" name="distr" lower="0" upper="1"/>
+
+<plate var='ST' range='8'>
+    <clockrate id="clockRate$(ST)" spec="feast.expressions.ExpCalculator">
+        <![CDATA[
+    		clock_shared * multiplier$(ST)
+        	]]>
+    	<arg idref="clock_shared"/>
+    	<arg idref="multiplier$(ST)"/>  
+    </clockrate>  
+</plate>
+
+
+<!-- MCMC -->
+
+<run id="mcmc" spec="MCMC" chainLength="1000000000000" sampleFromPrior='false'>
+
+    <state id="state" spec="State" storeEvery="10000">
+
+        <parameter id="rateAC" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateAG" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateAT" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateCG" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="rateGT" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+        <parameter id="gammaShape" spec="parameter.RealParameter" lower="0.1" name="stateNode">1.0</parameter>
+        <parameter id="clock_shared" spec="parameter.RealParameter" dimension="1" lower="1E-9" upper="1E-3" name="stateNode">1.0E-6</parameter>
+
+        <plate var='patient' range='8,15,17'>
+
+            <tree id="Tree$(patient)" spec="beast.base.evolution.tree.coalescent.RandomTree" taxa="@p$(patient)-alignment" name="stateNode">
+                <populationModel spec="beast.base.evolution.tree.coalescent.ConstantPopulation" popSize="1.0"/>
+                <trait idref="dateTraitSet$(patient)"/>
+			    <taxonset idref="TaxonSet$(patient)"/>
+            </tree>
+            <parameter id="popSize$(patient)" spec="parameter.RealParameter" lower="0.0" upper="1000" name="stateNode">0.3</parameter>
+            <parameter id="proportionInvariant$(patient)" spec="parameter.RealParameter" lower="0.0" name="stateNode" upper="1.0">0.9</parameter>
+        
+        </plate>
+
+        <plate var='ST' range='8'>       
+            <parameter id="multiplier$(ST)" spec="parameter.RealParameter" lower="0.001" upper="1000" name="stateNode">1.0</parameter>
+        </plate>
+
+    </state>
+
+	<!-- Posterior -->
+
+    <distribution id="posterior" spec="CompoundDistribution">
+
+        <!-- Prior -->
+
+        <distribution id="prior" spec="CompoundDistribution">
+
+        	<!-- Tree prior -->
+
+            <plate var='patient' range='8,15,17'>
+                <distribution id="CoalescentConstant$(patient)" spec="Coalescent">
+                    <populationModel id="ConstantPopulation$(patient)" spec="ConstantPopulation" popSize="@popSize$(patient)"/>
+                    <treeIntervals id="TreeIntervals$(patient)" spec="beast.base.evolution.tree.TreeIntervals" tree="@Tree$(patient)"/>
+                </distribution>
+            </plate>
+    
+            <prior id="GammaShapePrior" name="distribution" x="@gammaShape" distr="@Exponential.gamma"/>
+            <prior id="RateACPrior" name="distribution" x="@rateAC" distr="@Gamma.rateAC"/>
+            <prior id="RateAGPrior" name="distribution" x="@rateAG" distr="@Gamma.rateAG"/>
+            <prior id="RateATPrior" name="distribution" x="@rateAT" distr="@Gamma.rateAC"/>
+            <prior id="RateCGPrior" name="distribution" x="@rateCG" distr="@Gamma.rateAC"/>
+            <prior id="RateGTPrior" name="distribution" x="@rateGT" distr="@Gamma.rateAC"/>
+            <prior id="ClockPrior" name="distribution" x="@clock_shared" distr="@LogNormalDistributionModel.clock"/>
+
+            <plate var='ST' range='8'>
+                <prior id="multiplierPrior$(ST)" name="distribution" x="@multiplier$(ST)" distr="@LogNormalDistributionModel.multiplier"/>
+            </plate>
+
+            <plate var='patient' range='8,15,17'>
+                <prior id="PopSizePrior$(patient)" name="distribution" x="@popSize$(patient)" distr="@OneOnX.popSize"/>
+                <prior id="proportionInvariantPrior$(patient)" name="distribution" x="@proportionInvariant$(patient)" distr="@Uniform.propInvar"/>
+            </plate>
+
+        </distribution>
+
+        <!-- Tree likelihood -->
+
+        <distribution id="likelihood" spec="CompoundDistribution" useThreads="true">
+
+           <plate var='n' range='8,15,17'>
+                <distribution id="treeLikelihood$(n)" spec="ThreadedTreeLikelihood" data="@p$(n)-alignment" tree="@Tree$(n)">
+                    <siteModel id="SiteModel$(n)" spec="SiteModel" gammaCategoryCount="4" shape="@gammaShape" proportionInvariant="@proportionInvariant$(n)" mutationRate="@mutationRate">
+                        <substModel id="gtr$(n)" spec="GTR" rateAC="@rateAC" rateAG="@rateAG" rateAT="@rateAT" rateCG="@rateCG" rateGT="@rateGT" rateCT="@rateCT">
+                            <frequencies id="empiricalFreqs$(n)" spec="Frequencies" data="@p$(n)-alignment"/>
+                        </substModel>
+                    </siteModel>
+                    <branchRateModel spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate8"/>
+                </distribution>
+            </plate>          
+    
+        </distribution>
+
+    </distribution>
+    
+    
+
+    <!-- Operators -->
+    
+    <!-- Substitution model operators -->
+
+    <operator id="RateACScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateAC" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateAGScalerX" spec="kernel.BactrianScaleOperator"    parameter="@rateAG" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateATScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateAT" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateCGScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateCG" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="RateGTScalerX" spec="kernel.BactrianScaleOperator" parameter="@rateGT" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="gammaShapeScalerX" spec="kernel.BactrianScaleOperator" parameter="@gammaShape" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="StrictClockRateScalerX" spec="kernel.BactrianScaleOperator" parameter="@clock_shared" upper="10.0" weight="5.0"/>
+
+    <plate var='ST' range='8'>
+        <operator id="multiplierScalerX$(ST)" spec="kernel.BactrianScaleOperator" parameter="@multiplier$(ST)" weight="10.0"/>
+    </plate>
+
+    <plate var='patient' range='8,15,17'>
+
+    <operator id="strictClockUpDownOperatorX$(patient)" spec="operator.kernel.BactrianUpDownOperator" scaleFactor="0.75" weight="5.0">
+        <up idref="clock_shared"/>
+        <down idref="Tree$(patient)"/>
+    </operator>
+
+    <operator id="propInvarScaler$(patient)" spec="kernel.BactrianScaleOperator" parameter="@proportionInvariant$(patient)" scaleFactor="0.5" upper="10.0" weight="0.1"/>
+    <operator id="CoalescentConstantBICEPSEpochTop$(patient)" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree$(patient)" weight="2.0"/>
+    <operator id="CoalescentConstantBICEPSEpochAll$(patient)" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree$(patient)" weight="2.0"/>
+    <operator id="CoalescentConstantBICEPSTreeFlex$(patient)" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree$(patient)" weight="2.0"/>
+    <operator id="CoalescentConstantTreeRootScaler$(patient)" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree$(patient)" upper="10.0" weight="3.0"/>
+    <operator id="CoalescentConstantUniformOperator$(patient)" spec="kernel.BactrianNodeOperator" tree="@Tree$(patient)" weight="30.0"/>
+    <operator id="CoalescentConstantSubtreeSlide$(patient)" spec="kernel.BactrianSubtreeSlide" tree="@Tree$(patient)" weight="15.0"/>
+    <operator id="CoalescentConstantNarrow$(patient)" spec="Exchange" tree="@Tree$(patient)" weight="15.0"/>
+    <operator id="CoalescentConstantWide$(patient)" spec="Exchange" isNarrow="false" tree="@Tree$(patient)" weight="3.0"/>
+    <operator id="CoalescentConstantWilsonBalding$(patient)" spec="WilsonBalding" tree="@Tree$(patient)" weight="3.0"/>
+    <operator id="PopSizeScaler$(patient)" spec="kernel.BactrianScaleOperator" parameter="@popSize$(patient)" upper="10.0" weight="3.0"/>
+
+    </plate>
+
+
+    <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="100000" model="@posterior" sanitiseHeaders="true" sort="smart">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+        <log idref="rateAC"/>
+        <log idref="rateAG"/>
+        <log idref="rateAT"/>
+        <log idref="rateCG"/>
+        <log idref="rateGT"/>
+        <log idref="gammaShape"/>
+        <log idref="clock_shared"/>
+        <plate var='patient' range='8,15,17'>
+            <log idref="treeLikelihood$(patient)"/>
+            <log id="TreeHeight$(patient)" spec="beast.base.evolution.tree.TreeStatLogger" tree="@Tree$(patient)"/>
+            <log idref="popSize$(patient)"/>
+            <log idref="CoalescentConstant$(patient)"/>
+        </plate>
+        <plate var='ST' range='8'>
+            <log idref="clockRate$(ST)"/>
+            <log idref="multiplier$(ST)"/>
+        </plate>
+    </logger>
+
+    <logger id="screenlog" spec="Logger" logEvery="100000">
+        <log idref="posterior"/>
+        <log idref="likelihood"/>
+        <log idref="prior"/>
+    </logger>
+
+    <plate var='patient' range='8,15,17'>
+        <logger id="treelog$(patient)" spec="Logger" fileName="$(filebase).p$(patient).trees" logEvery="100000" mode="tree">
+            <log id="TreeWithMetaDataLogger$(patient)" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree$(patient)" dp="5"/>
+        </logger>
+    </plate>
+
+    <operatorschedule id="OperatorSchedule" spec="OperatorSchedule"/>
+</run>
+
+</beast>
