@@ -6,5 +6,5 @@ The raw sequencing data used in this study are available in the NCBI database un
 
 The repository is organized as follows:
 - The folder `analyses/` contains the XML files used for the phylodynamic analyses in BEAST2.
-- The folder `data/` contains the metadata.
+- The folder `alignments/` contains the alignments used as input for BEAST2.
 - The folder `scripts/` contains R script used for post-processing of the BEAST2 output.
