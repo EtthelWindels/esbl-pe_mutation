@@ -1,0 +1,12 @@
+#NEXUS
+[Data written by write.nexus.data.R, Sat Mar 23 17:57:02 2024]
+BEGIN DATA;
+  DIMENSIONS NTAX=3 NCHAR=104;
+  FORMAT DATATYPE=DNA MISSING=x GAP=- INTERLEAVE=NO;
+  MATRIX
+    Pat46/P0131/2013-04-01	      cctataacgcgcgctcaataggagataagcacttcatgtgcatagcggctagggccgcgaggtctgtctggaggccacgaaaacaaggtgcggaaccgcgcgaa
+    Pat46/P0134/2013-06-28	      tcgatattttatataaggagaggtgaggttgacctgcaaaagcgattagcgaaattatagtagtccaacacgaagtcgaggcgtggttcaaaagtttctagagg
+    Pat46/P0106/2013-09-26	      tagtattcttatataaggagaaatgaggttgattcatgtgcacgattagcgaaactatagtagtccaacacgaagtcgaggcgtggttcaaaagtttctgcgaa
+  ;
+END;
+
